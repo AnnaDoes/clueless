@@ -2,18 +2,68 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
 </head>
-<script>
-// When the user clicks on div, open the popup
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  console.log(popup);
-  popup.classList.toggle("show");
-
-</script>
-
 <body style="text-align:center">
 
+  
 <h2><font size="7"><h2>Website not working?</font></h2>
 
 <div class="popup" onclick="myFunction()"><font size="5">Click here to find out why the website is not done yet.</font>
@@ -46,5 +96,14 @@ Actions and rules
 The game starts with a player placing a guess. Then the other Players answer with how many of the things listed are in their set of cards. After players say how many they have the person who asked the clue can do one of two things:
  if only one person has a card that you named then they show you their card; if more than one player has a card listed then the person who asked the clue can choose which person he wants to show him the card. If someone has more than one card listed and they are choosen to show the card then they choose only one card to let the clue asker see. However if no one has a card they proceed to the next persons turn. When the card is being shown <em><b>only show the card to the person who asked the clue and not any other players.</p> </em></b>
 </font> 
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
