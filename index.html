@@ -3,7 +3,16 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<style>
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  console.log(popup);
+  popup.classList.toggle("show");
+
+</script>
+
+  <style>
 /* Popup container - can be anything you want */
 .popup {
   position: relative;
@@ -70,14 +79,6 @@
   <span class="popuptext" id="myPopup">The website is an in-progress work for making an online simpler version of the 2013 version clue, we are not done yet but hope to finsih this by the end of May. <em>please stand by...</em></span>
 </div>
 
-<script>
-// When the user clicks on div, open the popup
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  console.log(popup);
-  popup.classList.toggle("show");
-
-</script>
 
 </body>
 </html>
