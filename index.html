@@ -1,8 +1,8 @@
 <html>
 <!DOCTYPE html>
-<html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <style>
 /* Popup container - can be anything you want */
 .popup {
@@ -61,12 +61,12 @@
   to {opacity:1 ;}
 }
 </style>
-</head>
+  
 <body style="text-align:center">
 
-<font size="7"><h2>Website not working?</h2></font>
+<h2><font size="7"><h2>Website not working?</font></h2>
 
-<font size="5"><div class="popup" onclick="myFunction()">Click here to find out why the website is not done yet.</font>
+<div class="popup" onclick="myFunction()"><font size="5">Click here to find out why the website is not done yet.</font>
   <span class="popuptext" id="myPopup">The website is an in-progress work for making an online simpler version of the 2013 version clue, we are not done yet but hope to finsih this by the end of May. <em>please stand by...</em></span>
 </div>
 
@@ -74,6 +74,7 @@
 // When the user clicks on div, open the popup
 function myFunction() {
   var popup = document.getElementById("myPopup");
+  console.log(popup);
   popup.classList.toggle("show");
 
 </script>
@@ -88,11 +89,10 @@ function myFunction() {
 <font size="6" color=:"#3333ff" face="verdana">Hello User!</font>
 
 
-<h2 onClick="myFunction()" ><font face="Cursive" color="#00906f" size="5">You will be playing clue simplified but first here are some rules for the game: 
-                                                                                                                                                             <li></font></h2><img src="clue2013.jpg" alt="clue gameboard" width="500" height="500"></li>
+<h2 onClick="myFunction()" ><font face="Cursive" color="#00906f" size="5">You will be playing clue simplified but first here are some rules for the game:</font></h2> 
+<h2><img src="clue2013.jpg" alt="clue gameboard" width="500" height="500"></h2>
 
 
-<body>
  
  <font face="sans-serif"><p>Game has Stock which is set of Cards, Players, Safe. Game proceeds as sequence of Clues.</p>
   <p>Card can be Person, Tool or Place</p></font>
@@ -105,8 +105,7 @@ function myFunction() {
   <li>In the Safe there is a random person, tool, and place.</li>
   <li>What's inside the Safe needs to be found by Players by asking Clues and eliminating choices.</li></font>
 </ul>
-<h2><font face="Cursive" size="5" color="#00906f">Game setup and play:</font>
-<font color="#b30000" size="3"></h2>
+<h2><font face="Cursive" size="5" color="#00906f">Game setup and play:</font></h2>
 <p>Each Player gets a set of 4 cards as above 
 Actions and rules
 The game starts with a player placing a guess. Then the other Players answer with how many of the things listed are in their set of cards. After players say how many they have the person who asked the clue can do one of two things:
